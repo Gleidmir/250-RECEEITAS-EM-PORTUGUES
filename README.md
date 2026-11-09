@@ -16,9 +16,9 @@ Detalhes da Oferta:
 
 - Bônus Exclusivo de Ação Rápida: E-book "Superando a Diabetes" (Guia clínico-prático de prevenção, hábitos, controle de neuropatia, sono e reversão da resistência à insulina).
 
-- Preço Normal: $37,00 USD
+- Preço Normal: R$ 37,00
 
-- Preço Promocional de Lançamento: $7,90 USD (Pagamento Único, Acesso Imediato e Vitalício)
+- Preço Promocional de Lançamento: R$ 19,90 (Pagamento Único, Acesso Imediato e Vitalício)
 
 - Público-Alvo: Pessoas diagnosticadas com diabetes tipo 2 ou pré-diabetes, e familiares que cozinham com amor para proteger a saúde de seus entes queridos.
 
@@ -72,7 +72,7 @@ Estrutura e Copy da Página (Estritamente em Português Brasileiro Natural):
 
    - Botão CTA Primário:
 
-     "SIM, QUERO AS 250 RECEITAS POR APENAS $7,90!"
+     "SIM, QUERO AS 250 RECEITAS POR APENAS R$ 19,90!"
 
      Micro-cópia abaixo do botão: "🔒 Pagamento seguro via Hotmart • Download imediato em PDF no seu celular ou tablet • Garantia de 7 dias"
 
@@ -112,7 +112,7 @@ Estrutura e Copy da Página (Estritamente em Português Brasileiro Natural):
 
 5. Seção Bônus Grátis de Ação Rápida:
 
-   - Tag Flutuante: "BRINDE EXCLUSIVO HOJE (VALOR: $19,00 USD — GRÁTIS COM SUA COMPRA)"
+   - Tag Flutuante: "BRINDE EXCLUSIVO HOJE (VALOR: R$ 19,90 — GRÁTIS COM SUA COMPRA)"
 
    - Título do Livro Bônus: "E-book Superando a Diabetes: Guia de Ação Rápida"
 
@@ -140,21 +140,21 @@ Estrutura e Copy da Página (Estritamente em Português Brasileiro Natural):
 
    - Breakdown de Valor da Pilha:
 
-     * E-book 250 Receitas para Diabéticos (Valor Real: $37,00)
+     * E-book 250 Receitas para Diabéticos (Valor Real: R$ 37,00)
 
-     * E-book Superando a Diabetes (Valor Real: $19,00)
+     * E-book Superando a Diabetes (Valor Real: R$ 19,00)
 
      * Atualizações digitais vitalícias (Valor: Inestimável)
 
-   - Preço Riscado: "Preço Regular: $56,00 USD"
+   - Preço Riscado: "Preço Regular: R$ 56,00"
 
-   - Preço Grande e Negrito: "HOJE SOMENTE: $7,90 USD"
+   - Preço Grande e Negrito: "HOJE SOMENTE: R$ 19,90"
 
    - Subtítulo: "Pagamento único sem cobranças surpresa. Acesso digital imediato."
 
    - Botão Gigante (Laranja `#EA580C`):
 
-     "BAIXAR TODO O PACK POR APENAS $7,90 USD"
+     "BAIXAR TODO O PACK POR APENAS R$ 19,90"
 
    - Selos de Confiança: Criptografia SSL 256-bit, Hotmart Verified, Download Imediato em PDF.
 
@@ -178,7 +178,7 @@ Estrutura e Copy da Página (Estritamente em Português Brasileiro Natural):
 
     - Em viewports mobile, mostrar uma barra fixa inferior com:
 
-      "250 Receitas + Busca por $7,90" -> Botão CTA "Obter Agora".
+      "250 Receitas + Busca por R$ 19,90" -> Botão CTA "Obter Agora".
 
 ---
 

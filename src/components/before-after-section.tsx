@@ -90,7 +90,7 @@ export function BeforeAfterSection() {
                 className="sales-pulse group h-auto min-h-14 w-full rounded-2xl px-6 py-3.5 text-center shadow-lg"
               >
                 <a href={CHECKOUT_URL} className="flex items-center justify-center gap-2 text-base font-black uppercase tracking-wide">
-                  <span>Transformar minhas refeições por $5,90</span>
+                  <span>Transformar minhas refeições por R$ 19,90</span>
                   <ArrowRight className="shrink-0 stroke-[3] transition-transform duration-300 group-hover:translate-x-1.5 animate-arrow-nudge" size={20} />
                 </a>
               </Button>
