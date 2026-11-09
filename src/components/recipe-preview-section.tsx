@@ -138,23 +138,23 @@ export function RecipePreviewSection() {
         <div className={`mt-8 rounded-3xl border-2 bg-gradient-to-b ${recipe.color} p-6 sm:p-8 shadow-xl transition-all duration-300`}>
           <div className="flex flex-wrap items-center justify-between gap-4 border-b border-border/80 pb-5">
             <div className="flex items-center gap-3">
-              <span className="text-4xl sm:text-5xl">{r.icon}</span>
+              <span className="text-4xl sm:text-5xl">{recipe.icon}</span>
               <div>
-                <span className={`inline-block rounded-full border px-3 py-0.5 text-[11px] font-black uppercase tracking-wide ${r.badgeBg}`}>
-                  {r.chapter}
+                <span className={`inline-block rounded-full border px-3 py-0.5 text-[11px] font-black uppercase tracking-wide ${recipe.badgeBg}`}>
+                  {recipe.chapter}
                 </span>
                 <h3 className="mt-1 font-display text-xl font-black text-foreground sm:text-2xl">
-                  {r.title}
+                  {recipe.title}
                 </h3>
               </div>
             </div>
 
             <div className="flex flex-wrap items-center gap-3 text-xs font-bold text-muted-foreground">
               <span className="flex items-center gap-1.5 rounded-lg border border-border bg-white px-3 py-1.5 shadow-2xs">
-                <Clock size={15} className="text-brand" /> {r.prepTime}
+                <Clock size={15} className="text-brand" /> {recipe.prepTime}
               </span>
               <span className="flex items-center gap-1.5 rounded-lg border border-border bg-white px-3 py-1.5 shadow-2xs">
-                <ShieldCheck size={15} className="text-emerald-600" /> {r.gi}
+                <ShieldCheck size={15} className="text-emerald-600" /> {recipe.gi}
               </span>
             </div>
           </div>
@@ -166,7 +166,7 @@ export function RecipePreviewSection() {
                 <ChefHat size={18} className="text-brand" /> Ingredientes Fáceis de Encontrar:
               </h4>
               <ul className="mt-3.5 space-y-2">
-                {r.ingredients.map((ing) => (
+                {recipe.ingredients.map((ing) => (
                   <li key={ing} className="flex items-start gap-2 text-xs font-bold text-brand-dark sm:text-sm">
                     <Check size={16} className="mt-0.5 shrink-0 text-brand stroke-[3]" />
                     <span>{ing}</span>
@@ -182,7 +182,7 @@ export function RecipePreviewSection() {
                   Passo a Passo Rápido:
                 </h4>
                 <ol className="space-y-2 text-xs font-semibold text-brand-dark sm:text-sm">
-                  {r.steps.map((step, idx) => (
+                  {recipe.steps.map((step, idx) => (
                     <li key={step} className="flex gap-2">
                       <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-mint font-black text-[11px] text-brand-dark">
                         {idx + 1}
@@ -195,7 +195,7 @@ export function RecipePreviewSection() {
 
               {/* Dica Nutricional */}
               <div className="rounded-2xl border border-brand/30 bg-mint/50 p-4 text-xs font-bold text-brand-dark">
-                💡 <span className="font-black text-foreground">Dica de Saúde:</span> {r.tip}
+                💡 <span className="font-black text-foreground">Dica de Saúde:</span> {recipe.tip}
               </div>
             </div>
           </div>
