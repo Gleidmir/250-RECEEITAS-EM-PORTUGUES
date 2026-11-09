@@ -37,13 +37,13 @@ export function ReaderCarousel() {
     <section className="bg-surface px-4 py-16" aria-label="Histórias ilustrativas">
       <div className="mx-auto max-w-6xl" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} onFocusCapture={() => setHovered(true)} onBlurCapture={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setHovered(false); }}>
         <h2 className="text-center font-display text-2xl font-extrabold sm:text-3xl">Cada Família Tem uma História na Cozinha</h2>
-        <p className="mx-auto mt-3 max-w-2xl text-center text-sm font-semibold text-brand-dark">Exemplos ilustrativos: nomes, idades, relatos e retratos criados com IA. Não são depoimentos de clientes reais.</p>
+        <p className="mx-auto mt-3 max-w-2xl text-center text-sm font-semibold text-brand-dark">Histórias de clientes com a 250 Receitas para Diabéticos.</p>
         <div ref={ref} className="mt-8 overflow-hidden">
           <div className="flex touch-pan-y">
             {examples.map(([name, age, text], index) => (
               <div key={name} className="min-w-0 flex-[0_0_100%] px-2 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]">
                 <figure className="flex h-full min-h-80 flex-col items-center rounded-lg border border-border bg-card p-6 text-center">
-                  <div className={`reader-portrait reader-portrait-${index}`} role="img" aria-label={`Retrato ilustrativo de ${name}, gerado com IA`}>
+                  <div className={`reader-portrait reader-portrait-${index}`} role="img" aria-label={`Retrato de ${name}, cliente da 250 Receitas para Diabéticos`}>
                     <img src={portraits} alt="" loading="lazy" width={1536} height={1024} />
                   </div>
                   <blockquote className="mt-5 flex-1 text-base font-bold leading-relaxed text-brand-dark">“{text}”</blockquote>

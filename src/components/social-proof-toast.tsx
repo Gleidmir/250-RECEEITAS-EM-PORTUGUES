@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import { ShoppingBag, X, CheckCircle2 } from "lucide-react";
 
 const RECENT_PURCHASES = [
-  { name: "Maria G.", city: "São Paulo, Brasil", time: "há 2 min" },
-  { name: "Carlos R.", city: "Bogotá, Colômbia", time: "há 4 min" },
-  { name: "Elena S.", city: "Santiago, Chile", time: "há 1 min" },
-  { name: "Jorge M.", city: "Buenos Aires, Argentina", time: "há 5 min" },
-  { name: "Lucía P.", city: "Lima, Peru", time: "há 3 min" },
-  { name: "Antonio R.", city: "Montevideo, Uruguai", time: "há 6 min" },
-  { name: "Carmen V.", city: "San José, Costa Rica", time: "há 2 min" },
-  { name: "Rosa H.", city: "Guayaquil, Equador", time: "há 3 min" },
+  { name: "Maria G.", city: "São Paulo, SP", time: "há 2 min" },
+  { name: "Carlos R.", city: "Rio de Janeiro, RJ", time: "há 4 min" },
+  { name: "Elena S.", city: "Belo Horizonte, MG", time: "há 1 min" },
+  { name: "Jorge M.", city: "Curitiba, PR", time: "há 5 min" },
+  { name: "Lucía P.", city: "Salvador, BA", time: "há 3 min" },
+  { name: "Antonio R.", city: "Porto Alegre, RS", time: "há 6 min" },
+  { name: "Carmen V.", city: "Brasília, DF", time: "há 2 min" },
+  { name: "Rosa H.", city: "Fortaleza, CE", time: "há 3 min" },
 ];
 
 export function SocialProofToast() {
