@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ReaderCarousel } from "@/components/reader-carousel";
 import { UrgencyTimer } from "@/components/urgency-timer";
@@ -23,11 +23,38 @@ import {
 import mainCoverAsset from "@/assets/capa-250-recetas.png.asset.json";
 import bonusCoverAsset from "@/assets/capa-superando-diabetes.png.asset.json";
 
-// Portadas restauradas de los e-books (principal y bonus)
-const MAIN_EBOOK_COVER = "https://i.postimg.cc/dtpcWGvL/CAPA-ESPANHOL.png";
-const BONUS_EBOOK_COVER = "https://i.postimg.cc/jjT99X1S/Gemini-Generated-Image-h6eafvh6eafvh6ea.png";
+// Capas em português brasileiro
+const MAIN_EBOOK_COVER = "https://i.postimg.cc/gJMChrQs/CAPA.png";
+const BONUS_EBOOK_COVER = "https://i.postimg.cc/wvBP9gMJ/superando-a-diabetes.png";
 
 const CHECKOUT_URL = "https://pay.hotmart.com/R107911179I?checkoutMode=10";
+
+// Hook para scroll reveal
+function useScrollReveal() {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("scroll-reveal");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return ref;
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -225,6 +252,13 @@ function Faq() {
 }
 
 function Index() {
+  const dorRef = useScrollReveal();
+  const categoriaRef = useScrollReveal();
+  const bonusRef = useScrollReveal();
+  const preçoRef = useScrollReveal();
+  const garantiaRef = useScrollReveal();
+  const faqRef = useScrollReveal();
+
   return (
     <div className="font-sans text-foreground">
       {/* Contador de Escassez e Urgência */}
@@ -276,6 +310,7 @@ function Index() {
                   <span>{b}</span>
                 </li>
               ))}
+
             </ul>
 
             <div className="mx-auto mt-8 max-w-md">
@@ -335,7 +370,7 @@ function Index() {
       </header>
 
       {/* Dor */}
-      <section className="bg-surface px-4 py-16">
+      <section ref={dorRef} className="bg-surface px-4 py-16 scroll-reveal">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-center font-display text-2xl font-black text-foreground sm:text-3xl">
             Você Sente que Viver com Diabetes Transformou a Hora de Comer em um Castigo?
@@ -379,7 +414,7 @@ function Index() {
       <RecipePreviewSection />
 
       {/* Categorias */}
-      <section className="bg-white px-4 py-16">
+      <section ref={categoriaRef} className="bg-white px-4 py-16 scroll-reveal scroll-reveal-delay-1">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-center font-display text-2xl font-black sm:text-3xl">
             250 Opções Nutritivas e Saborosas para Cada Momento do Dia
@@ -443,7 +478,7 @@ function Index() {
       </section>
 
       {/* Bônus */}
-      <section className="bg-brand-dark px-4 py-16 text-white relative overflow-hidden">
+      <section ref={bonusRef} className="bg-brand-dark px-4 py-16 text-white relative overflow-hidden scroll-reveal scroll-reveal-delay-2">
         <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-2">
           <div className="relative text-center">
             <div className="cover-shine-wrapper cover-glow-bonus bonus-section-book mx-auto w-56 rounded-lg sm:w-72">
@@ -491,7 +526,7 @@ function Index() {
       <ReaderCarousel />
 
       {/* Preço */}
-      <section id="comprar" className="scroll-mt-16 bg-white px-4 py-16">
+      <section id="comprar" ref={preçoRef} className="scroll-mt-16 bg-white px-4 py-16 scroll-reveal scroll-reveal-delay-3">
         <div className="mx-auto max-w-2xl rounded-3xl border-2 border-brand/40 bg-white p-6 shadow-2xl sm:p-10">
           <div className="text-center">
             <span className="inline-block rounded-full bg-brand px-5 py-1.5 text-xs font-black uppercase tracking-wider text-white shadow-sm">
@@ -548,7 +583,7 @@ function Index() {
       </section>
 
       {/* Garantia */}
-      <section className="bg-surface px-4 py-16">
+      <section ref={garantiaRef} className="bg-surface px-4 py-16 scroll-reveal scroll-reveal-delay-4">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 rounded-3xl border-2 border-brand/20 bg-white p-8 text-center shadow-lg sm:flex-row sm:text-left">
           <div className="guarantee-seal relative flex h-28 w-28 shrink-0 items-center justify-center rounded-full bg-mint text-center text-brand-dark shadow-md" aria-label="Garantia de 7 dias">
             <div className="guarantee-ring absolute -inset-1.5 rounded-full border-2 border-dashed border-brand pointer-events-none" />
@@ -575,7 +610,7 @@ function Index() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white px-4 py-16 pb-32 md:pb-16">
+      <section ref={faqRef} className="bg-white px-4 py-16 pb-32 md:pb-16 scroll-reveal scroll-reveal-delay-5">
         <h2 className="mb-10 text-center font-display text-2xl font-black sm:text-3xl">
           Perguntas Frequentes
         </h2>

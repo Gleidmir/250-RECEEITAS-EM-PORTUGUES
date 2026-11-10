@@ -173,6 +173,38 @@
   --sales-glow: oklch(0.82 0.22 135 / 0.55);
   --empathy: oklch(0.87 0.12 152);
   --empathy-foreground: oklch(0.12 0 0);
+  --cover-brightness: 1.15;
+  --cover-saturate: 1.1;
+  --book-3d-shadow: 0 25px 50px -12px rgba(0,0,0,0.5), 0 0 60px 10px rgba(16,185,129,0.4);
+}
+
+/* Enhanced 3D Button with inner highlight */
+.btn-sales-3d {
+  background: linear-gradient(180deg, oklch(0.86 0.22 135) 0%, oklch(0.78 0.22 135) 100%);
+  color: var(--sales-foreground);
+  box-shadow:
+    0 6px 0 0 var(--sales-dark),
+    0 12px 26px -4px var(--sales-glow),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border: none;
+}
+
+.btn-sales-3d:hover {
+  background: linear-gradient(180deg, oklch(0.89 0.23 135) 0%, oklch(0.82 0.23 135) 100%);
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 0 0 var(--sales-dark),
+    0 16px 36px -2px var(--sales-glow),
+    inset 0 1px 0 rgba(255,255,255,0.4);
+}
+
+.btn-sales-3d:active {
+  transform: translateY(4px);
+  box-shadow:
+    0 2px 0 0 var(--sales-dark),
+    0 6px 16px -4px var(--sales-glow);
 }
 
 /* 3D Button style matching user high-converting references */
@@ -420,6 +452,43 @@
   animation: bonus-section-float 5s ease-in-out infinite;
 }
 
+/* Scroll reveal animations */
+@keyframes scrollReveal {
+  from {
+    opacity: 0;
+    transform: translateY(60px) rotateX(10deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+.scroll-reveal {
+  animation: scrollReveal 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.scroll-reveal-delay-1 { animation-delay: 0.1s; }
+.scroll-reveal-delay-2 { animation-delay: 0.2s; }
+.scroll-reveal-delay-3 { animation-delay: 0.3s; }
+.scroll-reveal-delay-4 { animation-delay: 0.4s; }
+.scroll-reveal-delay-5 { animation-delay: 0.5s; }
+
+/* Enhanced 3D book float */
+@keyframes main-book-float {
+  0%, 100% { transform: perspective(1000px) translateZ(50px) rotateY(4deg) translateY(0); }
+  50% { transform: perspective(1000px) translateZ(50px) rotateY(1deg) translateY(-8px); }
+}
+
+/* Enhanced marquee with glow */
+.marquee-track {
+  display: inline-flex;
+  min-width: 200%;
+  animation: marquee-scroll 22s linear infinite;
+  will-change: transform;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; }
   .cta-pulse { animation: none; }
@@ -430,6 +499,7 @@
   .bonus-section-book,
   .guarantee-ring { animation: none; }
   .bonus-book { z-index: 10 !important; }
+  .scroll-reveal { animation: none; }
 }
 
 html {
