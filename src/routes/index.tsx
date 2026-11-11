@@ -133,6 +133,11 @@ function CtaButton({
         value: 19.90,
         currency: "BRL",
       });
+      (window as unknown as { fbq: Function }).fbq("track", "Purchase", {
+        content_name: "250 Receitas para Diabéticos + Bônus",
+        value: 19.90,
+        currency: "BRL",
+      });
     }
   };
 
