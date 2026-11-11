@@ -296,7 +296,7 @@ function Index() {
               <Zap size={16} className="fill-brand text-brand" /> Aprovado para Diabéticos e Pré-diabéticos | Ingredientes Acessíveis
             </span>
             <h1 className="mt-5 font-display text-3xl font-black leading-tight text-foreground sm:text-4xl lg:text-5xl text-center">
-              250 RECEITAS SABORASAS PARA QUEM VIVE COM DIABETES
+              250 RECEITAS SABOROSAS PARA QUEM VIVE COM DIABETES
             </h1>
             <h2 className="mt-4 text-base font-bold leading-relaxed text-brand-dark sm:text-lg text-center max-w-2xl mx-auto">
               O livro de receitas definitivo com 250 preparações econômicas, deliciosas e de baixo índice
