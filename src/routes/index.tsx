@@ -59,13 +59,13 @@ function useScrollReveal() {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "250 Receitas para Diabéticos | Apenas R$ 19,90 Hoje" },
+      { title: "250 Receitas para Diabéticos | APENAS R$ 27,90 HOJE" },
       {
         name: "description",
         content:
-          "250 receitas econômicas e de baixo índice glicêmico + bônus Superando a Diabetes. Acesso imediato em PDF por apenas R$ 19,90.",
+          "250 receitas econômicas e de baixo índice glicêmico + bônus Superando a Diabetes. Acesso imediato em PDF por apenas R$ 27,90.",
       },
-      { property: "og:title", content: "250 Receitas para Diabéticos | Apenas R$ 19,90 Hoje" },
+      { property: "og:title", content: "250 Receitas para Diabéticos | APENAS R$ 27,90 HOJE" },
       {
         property: "og:description",
         content:
@@ -91,7 +91,7 @@ export const Route = createFileRoute("/")({
           category: "Livros digitais de saúde e nutrição",
           offers: {
             "@type": "Offer",
-            price: "19.90",
+            price: "27.90",
             priceCurrency: "BRL",
             availability: "https://schema.org/InStock",
             url: "/",
@@ -130,12 +130,12 @@ function CtaButton({
     if (typeof window !== "undefined" && (window as unknown as { fbq?: Function }).fbq) {
       (window as unknown as { fbq: Function }).fbq("track", "InitiateCheckout", {
         content_name: "250 Receitas para Diabéticos + Bônus",
-        value: 19.90,
+        value: 27.90,
         currency: "BRL",
       });
       (window as unknown as { fbq: Function }).fbq("track", "Purchase", {
         content_name: "250 Receitas para Diabéticos + Bônus",
-        value: 19.90,
+        value: 27.90,
         currency: "BRL",
       });
     }
@@ -296,7 +296,7 @@ function Index() {
               <Zap size={16} className="fill-brand text-brand" /> Aprovado para Diabéticos e Pré-diabéticos | Ingredientes Acessíveis
             </span>
             <h1 className="mt-5 font-display text-3xl font-black leading-tight text-foreground sm:text-4xl lg:text-5xl text-center">
-              Volte a Apreciar a Comida Saborosa sem Medo dos Picos de Glicose nem de Restrições Extremas
+              VOLTE A COMER SEM MEDO — SEM RESTRIÇÕES EXTREMAS
             </h1>
             <h2 className="mt-4 text-base font-bold leading-relaxed text-brand-dark sm:text-lg text-center max-w-2xl mx-auto">
               O livro de receitas definitivo com 250 preparações econômicas, deliciosas e de baixo índice
@@ -319,7 +319,7 @@ function Index() {
             </ul>
 
             <div className="mx-auto mt-8 max-w-md">
-              <CtaButton subtitle="ACESSO IMEDIATO EM PDF">Sim, quero as 250 receitas por apenas R$ 19,90!</CtaButton>
+              <CtaButton subtitle="ACESSO IMEDIATO EM PDF">Sim, quero as 250 receitas por apenas R$ 27,90!</CtaButton>
               <p className="mt-3.5 text-center text-xs font-semibold text-muted-foreground">
                 🔒 Pagamento seguro via Hotmart • Download imediato em PDF • Garantia de 7 dias
               </p>
@@ -477,7 +477,7 @@ function Index() {
             </div>
           </div>
           <div className="mx-auto mt-12 max-w-md">
-            <CtaButton subtitle="DOWNLOAD IMEDIATO EM PDF">Quero meu livro de receitas por R$ 19,90</CtaButton>
+            <CtaButton subtitle="DOWNLOAD IMEDIATO EM PDF">Quero meu livro de receitas por R$ 27,90</CtaButton>
           </div>
         </div>
       </section>
@@ -503,7 +503,7 @@ function Index() {
           </div>
           <div className="text-center">
             <span className="inline-flex items-center justify-center gap-2 rounded-full bg-cta px-4 py-2 text-xs font-black uppercase tracking-wide text-white shadow-md sm:text-sm">
-              <Gift size={18} /> Brinde Exclusivo Hoje (Valor: R$ 19,90 — GRÁTIS HOJE)
+              <Gift size={18} /> Brinde Exclusivo Hoje (Valor: R$ 27,90 — GRÁTIS HOJE)
             </span>
             <h2 className="mt-5 text-center font-display text-2xl font-black text-white sm:text-3xl leading-tight">
               E-book Superando a Diabetes: Guia de Ação Rápida
@@ -560,7 +560,7 @@ function Index() {
           <div className="mt-8 text-center">
             <p className="text-sm font-bold text-muted-foreground line-through">Preço Regular: R$ 56,00</p>
             <p className="mt-1 font-display text-4xl font-black text-brand sm:text-5xl">
-              HOJE SOMENTE: R$ 19,90
+              HOJE SOMENTE: R$ 27,90
             </p>
             <p className="mt-2 text-xs font-semibold text-muted-foreground sm:text-sm">
               Pagamento único sem assinaturas nem cobranças recorrentes. Acesso digital imediato.
@@ -569,7 +569,7 @@ function Index() {
 
           <div className="mt-8">
             <CtaButton href={CHECKOUT_URL} subtitle="ACESSO IMEDIATO - GARANTIA 7 DIAS">
-              Baixar todo o pack por apenas R$ 19,90
+              Baixar todo o pack por apenas R$ 27,90
             </CtaButton>
           </div>
 
@@ -621,7 +621,7 @@ function Index() {
         </h2>
         <Faq />
         <div className="mx-auto mt-10 max-w-md">
-          <CtaButton subtitle="DOWNLOAD IMEDIATO EM PDF">Obter o pack por R$ 19,90</CtaButton>
+          <CtaButton subtitle="DOWNLOAD IMEDIATO EM PDF">Obter o pack por R$ 27,90</CtaButton>
         </div>
       </section>
 
