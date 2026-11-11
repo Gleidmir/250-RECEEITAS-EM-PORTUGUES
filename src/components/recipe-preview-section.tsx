@@ -202,7 +202,7 @@ export function RecipePreviewSection() {
         </div>
 
         <div className="mt-10 rounded-2xl bg-mint/40 border border-brand/20 p-4 text-center text-xs font-bold text-brand-dark sm:text-sm max-w-2xl mx-auto shadow-sm">
-          ✨ Isto é apenas uma amostra! O e-book inclui <span className="font-extrabold text-brand-dark underline">250 receitas completas divididas em 7 capítulos</span> por apenas <span className="font-black text-brand">R$ 19,90</span>.
+          ✨ Isto é apenas uma amostra! O e-book inclui <span className="font-extrabold text-brand-dark underline">250 receitas completas divididas em 7 capítulos</span> por apenas <span className="font-black text-brand">R$ 27,90</span>.
         </div>
       </div>
     </section>

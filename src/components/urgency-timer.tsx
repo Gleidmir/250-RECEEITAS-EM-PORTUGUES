@@ -21,7 +21,7 @@ export function UrgencyTimer() {
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-2 text-center text-xs font-black uppercase tracking-wide sm:text-sm">
         <span className="inline-flex items-center gap-1.5 font-bold">
           <Zap size={16} className="fill-white text-white animate-pulse" />
-          OFERTA DE LANÇAMENTO (78% OFF)! O PREÇO DE R$ 19,90 EXPIRA EM:
+          OFERTA DE LANÇAMENTO (78% OFF)! O PREÇO DE R$ 27,90 EXPIRA EM:
         </span>
         <div className="inline-flex items-center gap-1 font-mono text-sm font-black bg-black/25 px-2.5 py-0.5 rounded-md border border-white/30 shadow-inner">
           <Timer size={15} className="mr-0.5 text-amber-200" />
