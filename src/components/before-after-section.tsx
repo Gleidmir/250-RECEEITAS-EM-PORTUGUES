@@ -1,7 +1,7 @@
 import { XCircle, CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const CHECKOUT_URL = "https://pay.hotmart.com/R107911179I?checkoutMode=10";
+const CHECKOUT_URL = "https://pay.hotmart.com/C108438825W?checkoutMode=10";
 
 export function BeforeAfterSection() {
   return (

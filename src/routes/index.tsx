@@ -27,7 +27,7 @@ import bonusCoverAsset from "@/assets/capa-superando-diabetes.png.asset.json";
 const MAIN_EBOOK_COVER = "https://i.postimg.cc/gJMChrQs/CAPA.png";
 const BONUS_EBOOK_COVER = "https://i.postimg.cc/wvBP9gMJ/superando-a-diabetes.png";
 
-const CHECKOUT_URL = "https://pay.hotmart.com/R107911179I?checkoutMode=10";
+const CHECKOUT_URL = "https://pay.hotmart.com/C108438825W?checkoutMode=10";
 
 // Hook para scroll reveal
 function useScrollReveal() {
